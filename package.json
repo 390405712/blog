@@ -1,6 +1,29 @@
 {
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "sh build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/390405712/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/390405712/blog/issues"
+  },
+  "homepage": "https://github.com/390405712/blog#readme",
+  "devDependencies": {
+    "vuepress": "^1.0.3",
+    "webpack-dev-middleware": "^3.7.0"
   }
 }
