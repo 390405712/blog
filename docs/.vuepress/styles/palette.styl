@@ -4,31 +4,45 @@ $textColor = #ffffff
 $borderColor = #dbedf3
 $codeBgColor = #404b69
 
-html,body{
-  width 100%!important
-  height 100%!important
+html, body {
+  width 100% !important
+  height 100% !important
   background-color $backgroundColor!important
+
 }
-.navbar{
-  background-image linear-gradient(120deg, rgb(38, 144, 249), $accentColor)!important
+code{
+  background-color $codeBgColor!important
+}
+
+.navbar {
+  background-image linear-gradient(120deg, rgb(38, 144, 249), $accentColor) !important
   //opacity 0.8
   //background-color $accentColor
-  border-style none!important
+  border-style none !important
 }
-.links{
-  background-color transparent!important
+
+.links {
+  background-color transparent !important
 }
-.sidebar{
+.search-box input{
+  color $codeBgColor!important
+}
+.suggestion{
+  background-color $codeBgColor!important
+}
+.sidebar {
   background-color $backgroundColor!important
 }
-.hero img{
+
+.hero img {
   width 200px
   height 200px
   border-radius 50%
 }
+
 /*---滚动条默认显示样式--*/
 ::-webkit-scrollbar-thumb {
-  background-color:$borderColor;
+  background-color: $borderColor;
   height: 5px;
   outline-offset: -2px;
   outline: 2px solid #fff;
