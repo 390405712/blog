@@ -1,20 +1,16 @@
 {
   "name": "ExceedPeakWu's Blog",
   "short_name": "Blog",
+  "display": "standalone",
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "/blog/logo.png",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/logo.png",
-      "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/blog/index.html",
   "display": "standalone",
-  "background_color": "",
-  "theme_color": ""
+  "background_color": "#283149",
+  "theme_color": "#fff"
 }

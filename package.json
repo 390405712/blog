@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/390405712/blog#readme",
   "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.0.0-rc.1",
     "vuepress": "^1.0.3",
     "webpack-dev-middleware": "^3.7.0"
   }
