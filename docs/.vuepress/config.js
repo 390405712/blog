@@ -4,7 +4,7 @@ module.exports = {
   title: "ExceedPeakWu's Blog",
   description: 'study notes',
   head: [
-    ['link', {rel: 'icon', href: `/logo.png`}],
+    ['link', {rel: 'icon', href: `/ChristmasLogo.png`}],
     ['link', {rel: 'manifest', href: '/manifest.json'}],
     // ['meta', {name: 'theme-color', content: '#3eaf7c'}],
     // ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
@@ -53,7 +53,8 @@ module.exports = {
           'es6/module',
           'es6/class',
           'es6/promise',
-          'es6/normal'
+          'es6/normal',
+          'es6/array',
         ]
       },
       {
@@ -100,9 +101,11 @@ module.exports = {
         ]
       },
       {
-        title: 'Vue高级进阶',
+        title: 'Vue实际使用',
         collapsable: false,
         children: [
+          'vueAdvanced/interpolation',
+          'vueAdvanced/api',
           'vueAdvanced/template',
         ]
       },
@@ -121,6 +124,7 @@ module.exports = {
         collapsable: false,
         children: [
           'IDE/git',
+          'IDE/linux',
         ]
       },
       {
@@ -153,7 +157,17 @@ module.exports = {
         title:'style',
         collapsable: false,
         children: [
+          'style/flex',
           'style/scss',
+        ]
+      },
+      {
+        title:'埋点',
+        collapsable: false,
+        children: [
+          'burialPoint/vue',
+          'burialPoint/wx',
+          'burialPoint/wepy',
         ]
       },
 

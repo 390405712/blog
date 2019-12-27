@@ -73,7 +73,7 @@ Elem.prototype.on = function(type, fn) {
   var elem = this.elem;
   elem.addEventListener(type, fn)
 }
- 
+
 var div = new Elem('div');
 console.log(div.html());
 div.html('<div>clike me</div>');
@@ -81,3 +81,9 @@ div.on('click',function() {
   alert('clicked')
 })
 ```
+
+- 所有的构造器的constructor都指向Function
+- Function的prototype指向一个特殊匿名函数，而这个特殊匿名函数的__proto__指向Object.prototype
+- 原型链顶端是Object.prototype
+- 构造函数创建的对象（Object、Function、Array、普通对象等）都是Function的实例，它们的__proto__均指向Function.prototype
+- 除了Object，所有对象（或叫构造函数）的prototype，均继承自Object.prototype

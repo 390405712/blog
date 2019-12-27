@@ -282,3 +282,33 @@ this.$emit("update:title".newTitle)
     }
 </script>
 ```
+
+## 在main.js中添加全局插件的注册
+```js
+...
+Vue.component('anchored-heading', {
+    render: function (createElement) {
+        return createElement(
+            'h' + this.level,   // tag name 标签名称
+            this.$slots.default // 子组件中的阵列
+        )
+    },
+    props: {
+        level: {
+            type: Number,
+            required: true
+        }
+    }
+});
+
+let vm = new Vue({
+    el: "#app",
+    render: h => h(app)
+});
+```
+```html
+<!-- index.vue -->
+<anchored-heading :level="1">Hello world!</anchored-heading>
+<!-- 渲染结果 -->
+<h1>Hello world!</h1>
+```

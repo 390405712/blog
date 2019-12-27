@@ -1,11 +1,3 @@
-<!--
- * @Author: wulihua
- * @Date: 2019-09-06 15:37:35
- * @LastEditors: wulihua
- * @LastEditTime: 2019-12-05 11:38:59
- * @Description: 文件描述
- * @FilePath: \blog\docs\performance\performance.md
- -->
 # 性能优化
 ## 资源合并压缩
 - fis

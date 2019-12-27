@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /ChristmasLogo.png
 actionText: 开始 →
 actionLink: /es6/
 features:
