@@ -10,8 +10,33 @@ html, body {
   background-color $backgroundColor!important
 
 }
+h1, h2, h3, h4{
+  text-shadow 2px 3px 5px black
+}
+pre{
+  box-shadow 0 0  5px black inset;
+  text-shadow 2px 3px 3px $backgroundColor
+}
+.string{
+  color #BEE58D!important
+}
+.operator{
+  color #C792EA!important
+}
+.punctuation{
+  color #89DAF3!important
+}
+.boolean{
+  color #FF536A!important
+}
+.function{
+  color #82AAF3!important
+}
+.attr-name{
+  color #C792EA!important
+}
 code{
-  background-color $codeBgColor!important
+  background-color $codeBgColor!important;
 }
 
 .navbar {
@@ -27,7 +52,7 @@ code{
 .search-box input{
   color $codeBgColor!important
 }
-.suggestion{
+.suggestions{
   background-color $codeBgColor!important
 }
 .sidebar {
@@ -52,6 +77,9 @@ tr:nth-child(2n) {
 
 th, td {
   min-width: 70px;
+}
+td {
+  background-color $backgroundColor!important
 }
 /*---滚动条默认显示样式--*/
 ::-webkit-scrollbar-thumb {

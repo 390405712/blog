@@ -215,6 +215,10 @@ computed: {
 
 ## v-once
 
+## v-slot / `#`
+
+
+
 ## 自定义指令 directives属性
 - 自定义指令可以放在组件内部使用directives属性，也可以把公用的指令，放到外部文件然后引用扩展到内部属性directives上
 ```html

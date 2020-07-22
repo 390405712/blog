@@ -1,11 +1,11 @@
 module.exports = {
   base: '/blog/',
   // dest: 'dist',
-  title: "ExceedPeakWu's Blog",
+  title: "EdpkWu's Blog",
   description: 'study notes',
   head: [
-    ['link', {rel: 'icon', href: `/ChristmasLogo.png`}],
-    ['link', {rel: 'manifest', href: '/manifest.json'}],
+    ['link', { rel: 'icon', href: `/ChristmasLogo.png` }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
     // ['meta', {name: 'theme-color', content: '#3eaf7c'}],
     // ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
     // ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
@@ -14,10 +14,13 @@ module.exports = {
     // ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
     // ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
-  plugins: ['@vuepress/pwa', {
-    serviceWorker: true,
-    updatePopup: true
-  }],
+  plugins: [
+    '@vuepress/pwa',
+    {
+      serviceWorker: true,
+      updatePopup: true,
+    },
+  ],
   serviceWorker: true,
   themeConfig: {
     repo: 'https://github.com/390405712/blog',
@@ -28,22 +31,18 @@ module.exports = {
     nav: [],
     sidebar: [
       {
-        title:'js基础',
+        title: 'js基础',
         collapsable: false,
-        children: [
-          'base/variable',
-          'base/prototype',
-          'base/scope',
-        ]
+        children: ['base/variable', 'base/prototype', 'base/scope'],
       },
       {
-        title:'js-Web-Api',
+        title: 'js-Web-Api',
         collapsable: false,
         children: [
           'js-Web-Api/DomBom',
           'js-Web-Api/event',
           'js-Web-Api/storage',
-        ]
+        ],
       },
       {
         title: 'ES6语法',
@@ -55,7 +54,7 @@ module.exports = {
           'es6/promise',
           'es6/normal',
           'es6/array',
-        ]
+        ],
       },
       {
         title: '原型',
@@ -65,7 +64,7 @@ module.exports = {
           'prototype/prototype',
           'prototype/jQuery',
           'prototype/Zepto',
-        ]
+        ],
       },
       {
         title: '异步',
@@ -77,7 +76,7 @@ module.exports = {
           'async/jquery-deferred',
           'async/promise',
           'async/async-await',
-        ]
+        ],
       },
       {
         title: '虚拟DOM',
@@ -87,7 +86,7 @@ module.exports = {
           'vdom/vdom-jquery',
           'vdom/vdom-snabbdom',
           'vdom/diff-algorithm',
-        ]
+        ],
       },
       {
         title: 'MVVM和vue',
@@ -98,7 +97,7 @@ module.exports = {
           'vue/mvvm',
           'vue/defineProperty',
           'vue/template',
-        ]
+        ],
       },
       {
         title: 'Vue实际使用',
@@ -107,70 +106,93 @@ module.exports = {
           'vueAdvanced/interpolation',
           'vueAdvanced/api',
           'vueAdvanced/template',
-        ]
+        ],
       },
       {
         title: '组件化和react',
         collapsable: false,
-        children: []
+        children: [],
       },
       {
         title: 'hybrid',
         collapsable: false,
-        children: []
+        children: [],
       },
       {
-        title:'开发环境',
+        title: '开发环境',
         collapsable: false,
-        children: [
-          'IDE/git',
-          'IDE/linux',
-        ]
+        children: ['IDE/git', 'IDE/linux'],
       },
       {
-        title:'性能优化',
+        title: '性能优化',
         collapsable: false,
-        children: [
-          'performance/performance',
-        ]
+        children: ['performance/performance'],
+      },
+      // {
+      //   title:'算法',
+      //   collapsable: false,
+      //   children: [
+      //     'algorithm/string',
+      //     'algorithm/array',
+      //     'algorithm/reg',
+      //     'algorithm/sort',
+      //     'algorithm/recursion',
+      //     'algorithm/stack',
+      //     // 'algorithm/queue',
+      //     // 'algorithm/linked-list',
+      //     // 'algorithm/matrix',
+      //     // 'algorithm/binary-tree',
+      //     // 'algorithm/heap',
+      //     // 'algorithm/greedy',
+      //     // 'algorithm/dynamic',
+      //   ]
+      // },
+      {
+        title: 'style',
+        collapsable: false,
+        children: ['style/flex', 'style/scss'],
       },
       {
-        title:'算法',
+        title: '埋点',
         collapsable: false,
         children: [
-          'algorithm/string',
-          'algorithm/array',
-          'algorithm/reg',
-          'algorithm/sort',
-          'algorithm/recursion',
-          'algorithm/stack',
-          // 'algorithm/queue',
-          // 'algorithm/linked-list',
-          // 'algorithm/matrix',
-          // 'algorithm/binary-tree',
-          // 'algorithm/heap',
-          // 'algorithm/greedy',
-          // 'algorithm/dynamic',
-        ]
-      },
-      {
-        title:'style',
-        collapsable: false,
-        children: [
-          'style/flex',
-          'style/scss',
-        ]
-      },
-      {
-        title:'埋点',
-        collapsable: false,
-        children: [
+          'burialPoint/js',
           'burialPoint/vue',
           'burialPoint/wx',
           'burialPoint/wepy',
-        ]
+          'burialPoint/documents',
+          'burialPoint/visual',
+          'burialPoint/vueElementui',
+        ],
       },
-
+      {
+        title: '封装element-ui',
+        collapsable: false,
+        children: [
+          'element-ui/searchGenerator',
+          'element-ui/tableGenerator',
+          'element-ui/formGenerator',
+        ],
+      },
+      {
+        title: '框架',
+        collapsable: false,
+        children: ['frame/frame'],
+      },
+      {
+        title: '代码规范',
+        collapsable: false,
+        children: [
+          'eCodeSpecification/web',
+          'eCodeSpecification/miniApp',
+          'eCodeSpecification/IDE',
+        ],
+      },
+      {
+        title: '微前端',
+        collapsable: false,
+        children: ['micro-app/qiankun'],
+      },
       // {
       //     title: '准备工作',
       //     collapsable: false,
@@ -268,6 +290,6 @@ module.exports = {
       //         'vuex/plugin'
       //     ]
       // }
-    ]
-  }
+    ],
+  },
 }

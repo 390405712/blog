@@ -96,17 +96,17 @@ module.exports = {
 ### 创建测试页面
 ```html
   <!--index.html-->
-  
+
   <script type="text/javascript" src="./build/bundle.js"></script>
 
-  <!--运行结果-->  
+  <!--运行结果-->
   console.log({a: 100})
   alert('fn1')
   alert('fn2')
 ```
 ## rollup(vue、react打包用)
 - `特点：small pieces!!`
-### 使用roolup
+### 使用rollup
 1. `npm init`
 2. `npm i rollup rollup-plugin-node-resolve rollup-plugin-babel babel-plugin-external-helpers babel-preset-latest babel-core --save-dev`
 3. `配置  .babelrc`
@@ -128,7 +128,7 @@ module.exports = {
 ```js
   import  babel from 'rollup-plugin-babel'
   import resolve from 'rollup-plugin-node-resolve'
-  
+
   export default {
     entry: 'src/index.js',
     format:'umd', //封装引入方式：是否支持exports\modules......
@@ -159,5 +159,3 @@ module.exports = {
 2. `AMD成为标准，require.js(也有CMD)`
 3. `前端打包工具，nodejs模块化可以被使用`
 4. `ES6出现，统一了模块化标准`
-  
-

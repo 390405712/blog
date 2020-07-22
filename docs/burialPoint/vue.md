@@ -4,16 +4,16 @@
   - 获取浏览器内核、操作系统、ip、省市,并生成trackId
   - 给trackId设定一个生命期限（时间戳），监听到新的埋点时，将之前设定的生命期限（时间戳）去对比当前时间戳，超过了则生成一个新的trackId
   ```js
-    {
-      type:'base',
-      value:{
-        kernel:'webkit',
-        system:'Windows NT 10.0; Win64; x64',
-        ip:222.95.35.152,
-        address:'江苏省南京市',
-      },
-      trackId
-    }
+  const base = {
+    kernel:'pc',
+    host: "localhost:8080",
+    system:'Windows NT 10.0; Win64; x64',
+    user: "用户名",
+    role: "角色名",
+    ip:222.95.35.152,
+    address:'江苏省南京市',
+    timeStamp: 1578369327076
+  }
   ```
 
   ### vue-router拦截器
@@ -24,8 +24,7 @@
       value:{
         to: 'http://localhost:8080/home',
         from: 'http://localhost:8080/login',
-        timeStamp:122000, // 当前路由时间戳
-        duration:123000, // 距离上次路由时间戳 注意距离上次路由时间是不是太久了
+        ...base
       },
       trackId
     }
@@ -35,7 +34,10 @@
   ```js
     {
       type:'input',
-      value:'input值',
+      value:{
+        value:'input值',
+        ...base
+      },
       trackId
     }
   ```
@@ -43,7 +45,10 @@
   ```js
     {
       type:'select',
-      value:'select文本值',
+      value:{
+        value:'select文本值',
+        ...base
+      },
       trackId
     }
   ```
@@ -51,7 +56,10 @@
   ```js
     {
       type:'button',
-      value:'button文本值',
+      value:{
+        value:'button文本值',
+        ...base
+      },
       trackId
     }
   ```
@@ -59,7 +67,10 @@
   ```js
     {
       type:'radio',
-      value:'radio文本值',
+      value:{
+        value:'radio文本值',
+        ...base
+      },
       trackId
     }
   ```
@@ -67,7 +78,10 @@
   ```js
     {
       type:'checkbox',
-      value:'checkbox文本值',
+      value:{
+        value:'checkbox文本值',
+        ...base
+      },
       trackId
     }
   ```
@@ -75,8 +89,10 @@
   ```js
     {
       type:'自定义',
-      value:'自定义的值',
-      trackId
+      value:{
+        value:'自定义的值',
+        ...base
+      },
     }
   ```
 
@@ -88,13 +104,13 @@
       value:{
         url:'http://...',
         headers:{...},
-        timeStamp:123000,
         // get
         method:'get',
         params:{...},
         // post
         method:'post',
         data:{...},
+        ...base
       }
       trackId,
     }
@@ -110,7 +126,7 @@
         headers:{...},
         data:{...},
         status:200,
-        timeStamp:123000,
+        ...base
       }
       trackId,
     }
